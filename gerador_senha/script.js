@@ -1,11 +1,32 @@
 
 const inputEl = document.querySelector("#password")
+const upperCaseCheckEl = document.querySelector("#uppercase-check")
+const numberCheckEl = document.querySelector("#numbers-check")
+const symbolCheckEl = document.querySelector("#symbol-check")
+
+let passwordLength = "16"
 
 function generatePassword() {
-    const chars = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ123456789?!@&*()[]"
-
+    let chars = "abcdefghjkmnpqrstuvwxyz"
+    
+    const upperCaseChars = "ABCDEFGHJKLMNPQRSTUVWXYZ"
+    const numberChars = "1234567890"
+    const symbolChars = "?!@&*()[]"
+    
+    if (upperCaseCheckEl.checked) {
+        chars += upperCaseChars
+    } 
+    
+    if (numberCheckEl.checked) {
+        chars += numberChars
+    }
+    
+    if (symbolCheckEl.checked) {
+        chars += symbolChars
+    } 
+    
     let password = ""
-
+    
     for (let i = 0; i < passwordLength; i++) {
         const randomNumber = Math.floor(Math.random() * chars.length)
         password += chars.substring(randomNumber, randomNumber + 1)
@@ -17,18 +38,20 @@ function generatePassword() {
         navigator.clipboard.writeText(inputEl.value)
     }
 
-    let passwordLength = "16"
 
     const passwordLengthEl = document.querySelector("#password-length")
     passwordLengthEl.addEventListener("input", function () {
         passwordLength = passwordLengthEl.value
+        document.querySelector("#password-length-text").innerHTML = passwordLength
 
         generatePassword()
     })
 
-    const copyButtonEl = document.querySelector("#copy")
-    copyButtonEl.addEventListener("click", copy)
+    upperCaseCheckEl.addEventListener("click", generatePassword)
+    numberCheckEl.addEventListener("click", generatePassword)
+    symbolCheckEl.addEventListener("click", generatePassword)
+
+    document.querySelector("#copy-1").addEventListener("click", copy)
+    document.querySelector("#copy-2").addEventListener("click", copy)
 
 generatePassword()
-
-
