@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(184, 247, 247);
+    padding-top: 2rem;
+}
+
+.quote {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+    background-color: #fff;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    color: #f4f4f4;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0.4rem;
+    color: #333;
+}
+
+.quote .text {
+    font-style: italic;
+    margin-bottom: 0.4rem;
+}
+
+.quote .author {
+    font-weight: 100;
+    color: #333;
+}
+
+.button {
+    font-size: 1.4rem;
+    background-color: rgb(41, 168, 168);
+    border-radius: 0.4rem;
+    padding: 1rem;
+    color: #ffffff;
+    box-shadow: 2px 2px 0px black;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.button:hover {
+    background-color: rgb(54, 212, 212);
+}
+
