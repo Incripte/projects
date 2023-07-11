@@ -64,16 +64,12 @@ textarea {
 }
 
 .list {
-    background-color: #fff;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    margin-top: 2rem;
     width: 60%;
     margin: 2rem auto;
-    border-radius: 0.2rem;
-    padding: 0 1rem;
 }
 
 .todo {
@@ -92,3 +88,33 @@ textarea {
     cursor: pointer;
 }
 
+ul,
+ol {
+    list-style: none;
+    width: 600px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #fff;
+    display: flex;
+    box-shadow: 3px 3px 0px black;
+    border: 2px solid black;
+    font-weight: 100;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0.5rem auto;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
