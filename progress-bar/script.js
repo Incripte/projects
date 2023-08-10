@@ -22,6 +22,9 @@ let progress = 0;
     progress -= 10
     if(progress < 0) progress = 0;
     updateProgressBar();
+    if(progress < 100) {
+      alertEl.style.visibility = "hidden"
+    }
   }
 
   previousBtn.addEventListener("click",backStep)
